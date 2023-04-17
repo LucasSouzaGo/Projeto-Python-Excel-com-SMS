@@ -1,2 +1,2 @@
 # Projeto-Python-Excel-com-SMS
-Meu primeiro projeto
+Meu primeiro projeto Excel + Python
