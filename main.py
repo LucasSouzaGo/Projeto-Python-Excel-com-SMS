@@ -1,8 +1,8 @@
 import pandas as pd
 from twilio.rest import Client
 
-account_sid = "AC79f4918c6e3dfdf366db1adb05ff64c9"
-auth_token  = "c028f3a87610e1235501ed4842a55e9b"
+account_sid = "Seu SID"
+auth_token  = "Seu token"
 client = Client(account_sid, auth_token)
 
 lista_meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho']
@@ -17,7 +17,7 @@ for mes in lista_meses:
         vendedor = tabela_vendas.loc[tabela_vendas['Vendas'] > 55000,'Vendedor'].values[0]
         vendas = tabela_vendas.loc[tabela_vendas['Vendas'] > 55000,'Vendas'].values[0]
         message = client.messages.create(
-            to="+5512982769355",
-            from_="+16202998929",
+            to="Seu número",
+            from_="Seu número Twilio",
             body="No mês {} o vendedor {} teve um total de vendas de {} ultrapassando 55.000".format(mes, vendedor, vendas))
         print(message.sid)
